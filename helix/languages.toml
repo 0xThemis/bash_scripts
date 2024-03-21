@@ -1,0 +1,17 @@
+[language-server.codebook]
+command = "codebook-lsp"
+args = ["serve"]
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+[language-server.rust-analyzer.config.files]
+watcher = "server"
+
+[[language]]
+name = "rust"
+language-servers = [ "rust-analyzer", "codebook" ]
+
+[[language]]
+name = "markdown"
+language-servers = [ "codebook" ]
