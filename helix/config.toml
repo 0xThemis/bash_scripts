@@ -12,7 +12,6 @@ end-of-line-diagnostics = "hint"
 completion-timeout = 5
 true-color = true
 insert-final-newline = false
-rounded-corners = true
 
 [editor.statusline]
 left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
@@ -23,9 +22,6 @@ insert = "bar"
 normal = "block"
 select = "underline"
 
-
-[editor.aliases]
-blame = ["sh git blame -L %{cursor_line},+1 %{buffer_name}"]
 
 [editor.file-picker]
 hidden = true
@@ -53,7 +49,6 @@ C-h = ["jump_view_left"]
 C-j = ["jump_view_down"]
 C-k = ["jump_view_up"]
 C-l = ["jump_view_right"]
-C-n = ["file_tree"]
 D = "@xd"
 Y = "@xy"
 y = ["yank", "collapse_selection"] 
