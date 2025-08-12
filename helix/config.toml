@@ -56,6 +56,7 @@ y = ["yank", "collapse_selection"]
 [keys.normal.space]
 o = "file_picker_in_current_buffer_directory"
 x = ":write-buffer-close"
+n = ":new"
 
 [keys.normal.space.t]
 h = ":toggle lsp.display-inlay-hints"
