@@ -102,7 +102,17 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-eval "$(keychain --eval --agents ssh id_ed25519 --quiet)"
 fpath=(~/.local/share/zsh-completions $fpath)
 autoload -Uz compinit
 compinit -u
+
+export PATH="$PATH:$HOME/.local/bin"
+
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh --disable-up-arrow)"
+export PATH="/Users/nieddu/Library/Python/3.9/bin:$PATH"
+
+alias python="python3"
+ssh-add -l | grep -q "$(ssh-keygen -lf ~/.ssh/id_ed25519.pub | awk '{print $2}')" || ssh-add ~/.ssh/id_ed25519
+
